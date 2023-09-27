@@ -12,16 +12,14 @@ const displayMoney = (color)=>{
     li.textContent = value + "$"
     if(value != 0){
         if(color == "red"){
-            li.style.color = "red"
-            moneyDisplay.appendChild(li)
+            li.style.color = color
             sum -= Number(value)
-            budgetDisplay.textContent = "Budget: " + sum.toString() + "$"
         }else{
-            li.style.color = "green"
-            moneyDisplay.appendChild(li)
+            li.style.color = color
             sum += Number(value)
-            budgetDisplay.textContent = "Budget: " + sum.toString() + "$"
         }
+        budgetDisplay.textContent = "Budget: " + sum.toString() + "$"
+        moneyDisplay.appendChild(li)
     }else {
         console.log("error")
     }
