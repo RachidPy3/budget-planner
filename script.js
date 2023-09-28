@@ -8,8 +8,8 @@ const moneyDisplay = document.querySelector("ul")
 let sum = 0
 
 const displayMoney = (color)=>{
-    let value = numInput.value
     let nameValue = nameInput.value
+    let value = numInput.value
     let li = document.createElement("li")
     li.textContent = `${nameValue}: ${value}$`
     if(value != 0){
@@ -31,6 +31,7 @@ const displayMoney = (color)=>{
 revenueBtn.addEventListener("click", ()=>{
     displayMoney("green")
 })
+
 expenseBtn.addEventListener("click", ()=>{
     displayMoney("red")
 })
