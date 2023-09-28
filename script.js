@@ -28,10 +28,17 @@ const displayMoney = (color)=>{
     }
 }
 
+const reset = ()=>{
+    numInput.value = ""
+    nameInput.value = ""
+}
+
 revenueBtn.addEventListener("click", ()=>{
     displayMoney("green")
+    reset()
 })
 
 expenseBtn.addEventListener("click", ()=>{
     displayMoney("red")
+    reset()
 })
