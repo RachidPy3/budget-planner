@@ -14,12 +14,11 @@ const displayMoney = (color)=>{
     li.textContent = `${nameValue}: ${value}$`
     if(value != 0){
         if(color == "red"){
-            li.style.color = color
             sum -= Number(value)
         }else{
-            li.style.color = color
             sum += Number(value)
         }
+        li.style.color = color
         localStorage.setItem("budget", sum.toString())
         let savedBudget = localStorage.getItem("budget")
         budgetDisplay.textContent = "Budget: " + savedBudget + "$"
