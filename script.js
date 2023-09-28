@@ -21,7 +21,7 @@ const displayMoney = (color)=>{
         li.style.color = color
         localStorage.setItem("budget", sum.toString())
         let savedBudget = localStorage.getItem("budget")
-        budgetDisplay.textContent = "Budget: " + savedBudget + "$"
+        budgetDisplay.textContent = `Budget: ${savedBudget}$`
         moneyDisplay.appendChild(li)
     }else {
         console.log("error")
